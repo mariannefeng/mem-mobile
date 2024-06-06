@@ -1,0 +1,14 @@
+{
+  "resourceName": "mempics",
+  "policyUUID": "c4fd27ea",
+  "bucketName": "memmobile7b51806ba84c4a0e8b5155116d61b910",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Trigger37cfe1dd",
+  "groupAccess": {}
+}

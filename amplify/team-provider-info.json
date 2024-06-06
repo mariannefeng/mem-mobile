@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-memmobile-dev-ceda7-authRole",
+      "UnauthRoleArn": "arn:aws:iam::421302897222:role/amplify-memmobile-dev-ceda7-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::421302897222:role/amplify-memmobile-dev-ceda7-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-memmobile-dev-ceda7-deployment",
+      "UnauthRoleName": "amplify-memmobile-dev-ceda7-unauthRole",
+      "StackName": "amplify-memmobile-dev-ceda7",
+      "StackId": "arn:aws:cloudformation:us-east-1:421302897222:stack/amplify-memmobile-dev-ceda7/567fcb30-2356-11ef-9cc2-12cf8ff355a9",
+      "AmplifyAppId": "d2yjcoh6pdzbzi"
+    },
+    "categories": {
+      "auth": {
+        "memmobile9efed2c6": {}
+      },
+      "function": {
+        "S3Trigger37cfe1dd": {
+          "deploymentBucketName": "amplify-memmobile-dev-ceda7-deployment",
+          "s3Key": "amplify-builds/S3Trigger37cfe1dd-4d33496e62336f365937-build.zip"
+        }
+      },
+      "storage": {
+        "mempics": {}
+      }
+    }
+  }
+}
