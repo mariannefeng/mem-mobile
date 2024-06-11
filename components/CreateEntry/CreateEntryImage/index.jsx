@@ -9,7 +9,7 @@ import { API_URL } from '../../../constants';
 
 const DISABLE_S3 = process.env.EXPO_PUBLIC_DISABLE_S3;
 
-export const CreateImage = ({ navigation }) => {
+export const CreateEntryImage = ({ navigation }) => {
 
     const [uploading, setUploading] = useState(false);
     const [percentage, setPercentage] = useState(0);

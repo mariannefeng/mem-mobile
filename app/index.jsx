@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import Constants from "expo-constants";
 import * as ImagePicker from "expo-image-picker";
-import { Create } from '../components/Create';
-import { CreateText } from '../components/Create/CreateText';
-import { CreateImage } from '../components/Create/CreateImage';
+import { CreateEntry } from '../components/CreateEntry';
 import { ViewFeed } from '../components/ViewFeed';
 import { Profile } from '../components/Profile';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -13,18 +11,35 @@ import { Amplify } from 'aws-amplify';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 import amplifyconfig from '../src/amplifyconfiguration.json';
+import { Books } from "../components/Books";
+import { CreateBook } from "../components/Books/CreateBook";
+import { CreateEntryText } from "../components/CreateEntry/CreateEntryText";
+import { CreateEntryImage } from "../components/CreateEntry/CreateEntryImage";
 Amplify.configure(amplifyconfig);
 
-const CreateStackScreen = () => {
+const CreateEntryStackScreen = () => {
     const CreateStack = createNativeStackNavigator();
 
     return (
         <CreateStack.Navigator screenOptions={{
             headerShown: false,
         }}>
-            <CreateStack.Screen name="Create" component={Create} />
-            <CreateStack.Screen name="CreateText" component={CreateText} />
-            <CreateStack.Screen name="CreateImage" component={CreateImage} />
+            <CreateStack.Screen name="CreateEntry" component={CreateEntry} />
+            <CreateStack.Screen name="CreateEntryText" component={CreateEntryText} />
+            <CreateStack.Screen name="CreateEntryImage" component={CreateEntryImage} />
+        </CreateStack.Navigator>
+    )
+}
+
+const BooksStackScreen = () => {
+    const CreateStack = createNativeStackNavigator();
+
+    return (
+        <CreateStack.Navigator screenOptions={{
+            headerShown: false,
+        }}>
+            <CreateStack.Screen name="ViewBooks" component={Books} />
+            <CreateStack.Screen name="CreateBook" component={CreateBook} />
         </CreateStack.Navigator>
     )
 }
@@ -63,6 +78,9 @@ export default function App() {
                         case 'Me':
                             iconName = focused ? 'person-circle' : 'person-circle-outline';
                             break;
+                        case 'Books':
+                            iconName = focused ? 'book' : 'book-outline';
+                            break;
                     }
 
                     return <Ionicons name={iconName} size={size} />;
@@ -70,8 +88,11 @@ export default function App() {
             })}
         >
             <Tab.Screen options={{
+                title: "Books"
+            }} name="Books" component={BooksStackScreen} />
+            <Tab.Screen options={{
                 title: "Create",
-            }} name="CreateStack" component={CreateStackScreen} />
+            }} name="CreateStack" component={CreateEntryStackScreen} />
             <Tab.Screen options={{
                 title: "Reminisce"
             }} name="View" component={ViewFeed} />

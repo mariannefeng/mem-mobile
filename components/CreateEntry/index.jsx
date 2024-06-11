@@ -2,7 +2,7 @@ import { View, StyleSheet } from 'react-native';
 import { SIZES } from '../../constants';
 import { Button, BigText } from '../shared/Button';
 
-export const Create = ({ navigation }) => {
+export const CreateEntry = ({ navigation }) => {
     return (
         <View>
             <View style={styles.headerWrapper}>
@@ -10,8 +10,8 @@ export const Create = ({ navigation }) => {
             </View>
 
             <View>
-                <Button onPress={() => { navigation.navigate('CreateText') }} displayText='text' />
-                <Button onPress={() => { navigation.navigate('CreateImage') }} displayText='picture' />
+                <Button onPress={() => { navigation.navigate('CreateEntryText') }} displayText='text' />
+                <Button onPress={() => { navigation.navigate('CreateEntryImage') }} displayText='picture' />
             </View>
         </View>
     )

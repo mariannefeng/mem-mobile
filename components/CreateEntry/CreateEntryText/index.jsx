@@ -5,7 +5,7 @@ import { Button, BigText } from '../../shared/Button';
 import axios from 'axios';
 import { StackActions } from '@react-navigation/native';
 
-export const CreateText = ({ navigation }) => {
+export const CreateEntryText = ({ navigation }) => {
     const [memText, setMemText] = useState('');
     const [loading, setLoading] = useState(false);
 
